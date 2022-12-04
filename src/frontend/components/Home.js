@@ -69,7 +69,7 @@ const Home = ({ contract }) => {
   })
 
   if (loading) return (
-    <main style={{ padding: "1rem 0" }}>
+    <main style={{ padding: "4rem 0" }}>
       <h2>Loading...</h2>
     </main>
   )

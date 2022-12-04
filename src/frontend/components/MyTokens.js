@@ -59,7 +59,7 @@ export default function MyTokens({ contract }) {
   })
 
   if (loading) return (
-    <main style={{ padding: "1rem 0" }}>
+    <main style={{ padding: "4rem 0" }}>
       <h2>Loading...</h2>
     </main>
   )
@@ -120,7 +120,7 @@ export default function MyTokens({ contract }) {
           </Row>
         </div>
         : (
-          <main style={{ padding: "1rem 0" }}>
+          <main style={{ padding: "4rem 0" }}>
             <h2>No owned tokens</h2>
           </main>
         )}

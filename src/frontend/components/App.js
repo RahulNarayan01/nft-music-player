@@ -39,18 +39,18 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <>
-          <Navbar expand="lg" bg="secondary" variant="dark">
+          <Navbar expand="lg" bg="primary" variant="dark">
             <Container>
-              <Navbar.Brand href="http://www.dappuniversity.com/bootcamp">
+              <Navbar.Brand href="/">
                 <img src={logo} width="40" height="40" className="" alt="" />
                 &nbsp; Music NFT player
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link as={Link} to="/">Home</Nav.Link>
-                  <Nav.Link as={Link} to="/my-tokens">My Tokens</Nav.Link>
-                  <Nav.Link as={Link} to="/my-resales">My Resales</Nav.Link>
+                  <Nav.Link className="text-light" as={Link} to="/">Home</Nav.Link>
+                  <Nav.Link className="text-light" as={Link} to="/my-tokens">My Tokens</Nav.Link>
+                  <Nav.Link className="text-light" as={Link} to="/my-resales">My Resales</Nav.Link>
                 </Nav>
                 <Nav>
                   {account ? (
@@ -59,7 +59,11 @@ function App() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="button nav-button btn-sm mx-4">
+                      
                       <Button variant="outline-light">
+                      <p className="text-white p-0 m-0 hover:text-black">
+                          Wallet Connected
+                        </p>
                         {account.slice(0, 5) + '...' + account.slice(38, 42)}
                       </Button>
 
@@ -76,7 +80,7 @@ function App() {
           {loading ? (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' }}>
               <Spinner animation="border" style={{ display: 'flex' }} />
-              <p className='mx-3 my-0'>Awaiting Metamask Connection...</p>
+              <p className='mx-3 my-0 '>Awaiting Metamask Connection...</p>
             </div>
           ) : (
             <Routes>
@@ -91,6 +95,17 @@ function App() {
               } />
             </Routes>
           )}
+        </div>
+        <div style={{ padding: "4rem 0"}}>
+          <h3>
+            @Music NFT player
+          </h3>
+          <p>
+            powered by
+          </p>
+          <h3>
+            Team Moto
+          </h3>
         </div>
       </div>
     </BrowserRouter>

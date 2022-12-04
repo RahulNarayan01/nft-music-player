@@ -58,7 +58,7 @@ export default function MyResales({ contract, account }) {
   })
 
   if (loading) return (
-    <main style={{ padding: "1rem 0" }}>
+    <main style={{ padding: "4rem 0" }}>
       <h2>Loading...</h2>
     </main>
   )
@@ -120,14 +120,14 @@ export default function MyResales({ contract, account }) {
                   ))}
                 </Row>
                 : (
-                  <main style={{ padding: "1rem 0" }}>
+                  <main style={{ padding: "4rem 0" }}>
                     <h2>No sold assets</h2>
                   </main>
                 )}
             </>
           </div>
           : (
-            <main style={{ padding: "1rem 0" }}>
+            <main style={{ padding: "4rem 0" }}>
               <h2>No listed assets</h2>
             </main>
           )}
